@@ -1,10 +1,10 @@
 # CommentPress Thoreau Theme
 
-A WordPress child theme of the "CommentPress Flat" theme for CommentPress-enabled sub-sites on the [the "Readers' Thoreau" website](https://commons.digitalthoreau.org/).
+A WordPress child theme of the "CommentPress Flat" theme for CommentPress-enabled sub-sites on [the "Readers' Thoreau" website](https://commons.digitalthoreau.org/).
 
 ## Description
 
-This repo holds the code for the WordPress child theme of the "CommentPress Flat" theme for CommentPress-enabled sub-sites on the [the "Readers' Thoreau" website](https://commons.digitalthoreau.org/).
+This repo holds the code for the WordPress child theme of the "CommentPress Flat" theme for CommentPress-enabled sub-sites on [the "Readers' Thoreau" website](https://commons.digitalthoreau.org/).
 
 ## Installation
 
