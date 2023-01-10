@@ -132,7 +132,7 @@ function commentpress_thoreau_enqueue_styles() {
 			// Enqueue accordion-like js.
 			wp_enqueue_script(
 				'cp_special',
-				get_template_directory_uri() . '/assets/js/cp_js_all_comments.js',
+				get_template_directory_uri() . '/assets/js/all-comments.js',
 				[ 'cp_form' ], // Dependencies.
 				COMMENTPRESS_THOREAU_VERSION,
 				false
@@ -254,7 +254,10 @@ if ( ! function_exists( 'commentpress_thoreau_get_featured_comments_page_content
 	function commentpress_thoreau_get_featured_comments_page_content() {
 
 		// Declare access to globals.
-		global $commentpress_core, $bp_groupsites;
+		global $bp_groupsites;
+
+		// Get core plugin reference.
+		$core = commentpress_core();
 
 		// Remove action to insert comments-by-group filter.
 		if ( is_object( $bp_groupsites ) ) {
@@ -271,7 +274,7 @@ if ( ! function_exists( 'commentpress_thoreau_get_featured_comments_page_content
 		$_page_content = '<h2 class="post_title">' . $pagetitle . '</h2>' . "\n\n";
 
 		// Get page or post.
-		$page_or_post = $commentpress_core->get_list_option();
+		$page_or_post = $core->nav->setting_post_type_get();
 
 		// Set default.
 		$blogtitle = apply_filters(
@@ -344,7 +347,7 @@ if ( ! function_exists( 'commentpress_thoreau_get_featured_comments_content' ) )
 	function commentpress_thoreau_get_featured_comments_content( $page_or_post = 'page' ) {
 
 		// Declare access to globals.
-		global $commentpress_core, $cp_comment_output;
+		global $cp_comment_output;
 
 		// Init output.
 		$html = '';
@@ -573,7 +576,10 @@ if ( ! function_exists( 'commentpress_thoreau_get_liked_comments_page_content' )
 	function commentpress_thoreau_get_liked_comments_page_content() {
 
 		// Access to globals.
-		global $commentpress_core, $bp_groupsites;
+		global $bp_groupsites;
+
+		// Get core plugin reference.
+		$core = commentpress_core();
 
 		// Remove action to insert comments-by-group filter.
 		if ( is_object( $bp_groupsites ) ) {
@@ -593,7 +599,7 @@ if ( ! function_exists( 'commentpress_thoreau_get_liked_comments_page_content' )
 		$_page_content = '<h2 class="post_title">' . $pagetitle . '</h2>' . "\n\n";
 
 		// Get page or post.
-		$page_or_post = $commentpress_core->get_list_option();
+		$page_or_post = $core->nav->setting_post_type_get();
 
 		// Set default.
 		$blogtitle = apply_filters(
@@ -666,7 +672,7 @@ if ( ! function_exists( 'commentpress_thoreau_get_liked_comments_content' ) ) :
 	function commentpress_thoreau_get_liked_comments_content( $page_or_post = 'page' ) {
 
 		// Declare access to globals.
-		global $commentpress_core, $cp_comment_output;
+		global $cp_comment_output;
 
 		// Init output.
 		$html = '';
