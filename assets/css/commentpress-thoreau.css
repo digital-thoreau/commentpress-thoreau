@@ -1,0 +1,839 @@
+/*
+================================================================================
+CommentPress Thoreau Styles
+================================================================================
+AUTHOR: Christian Wach <needle@haystack.co.uk>
+--------------------------------------------------------------------------------
+NOTES
+
+All styles that are specific to the Thoreau CommentPress texts live here.
+
+--------------------------------------------------------------------------------
+*/
+
+
+
+/*
+--------------------------------------------------------------------------------
+Fonts
+--------------------------------------------------------------------------------
+*/
+
+/* Georgia */
+#header #tagline,
+body#main_blog div#item-header div#item-meta
+{
+	font-family: Georgia, Times, serif;
+}
+
+/* Google Webfont: using "Lato" enqueued in functions.php */
+
+/* Content is serif by default */
+.post,
+.comment-content,
+
+/* Titles and headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#title h1,
+#title h1 a,
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6,
+
+/* Signup, Activate and Register pages */
+body.create-blog #content #setupform label,
+#register-page #signup_form h2,
+#content #activateform label
+#content .mu_register h2,
+#content .mu_register label,
+#content #signup-content h2,
+#content #activateform label,
+
+/* CommentPress Core form inserts */
+body.create-blog #cp-multisite-options h4,
+#content .mu_register #cp-multisite-options h3,
+
+/* Comment form */
+div#respond h4#respond_title,
+
+/* CommentPress JSTOR plugin support */
+.commentpress_jstor .comment-title a,
+
+/* Sidebar Widgets */
+.sidebar_container .widget
+{
+	font-family: Lato, 'Trebuchet MS', Helvetica, Arial, sans-serif;
+}
+
+/* Headings on page/posts */
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6
+{
+	/* don't force uppercase */
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Header
+--------------------------------------------------------------------------------
+*/
+
+@media (max-width: 600px) {
+	#header
+	{
+		font-size: 100%;
+	}
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Widgets & Widget Areas
+--------------------------------------------------------------------------------
+*/
+
+
+
+/*
+--------------------------------------------------------------------------------
+Colour Scheme
+--------------------------------------------------------------------------------
+*/
+
+/* The all-important highlight state */
+.selected_para
+{
+	color: #ca0000;
+}
+
+
+
+/* Structural Items */
+html,
+body.blogtype-0,
+body#main_blog,
+#container,
+#comments_sidebar,
+#activity_sidebar
+{
+	background: #f5f8fa;
+}
+
+#wrapper
+{
+	background-color: transparent;
+}
+
+
+
+/* Site Tagline */
+#header #tagline
+{
+	color: #999;
+}
+
+
+
+/* Links in page/post content */
+.post a,
+
+/* Stray BuddyPress */
+body.create-blog #content a,
+
+/* Links in comment identifiers */
+.comment-content a,
+div#respond .subscribe_reloaded_insert a
+.comment-meta a,
+.acomment-meta a,
+.meta a,
+
+/* Links in comments */
+.comment-identifier .comment-edit a:hover,
+.comment-identifier .comment-assign:hover,
+.comment-identifier cite a:hover,
+.reply a:hover,
+.comment_permalink:hover,
+.comment_activity_link:hover,
+.author_is_logged_in a:hover,
+#cancel-comment-reply-link:hover,
+
+/* Signup, Activate and Register page links */
+#content .mu_register h2 a,
+#content #signup-content a,
+#content #activateform label,
+#content #signup-welcome span.h3,
+
+/* Signup Form Styles */
+body.commentpress_page #cp-multisite-options h3,
+
+/* Post version info */
+#content div.version_info a,
+.content div.version_info a,
+
+/* Footnotes */
+#content sup a.footnote-link,
+.content sup a.footnote-link,
+#content a.simple-footnote,
+.content a.simple-footnote,
+#content sup.footnote,
+.content sup.footnote,
+
+/* Feature Comments compat */
+.feature-bury-comments a.feature-comments:hover,
+.feature-burry-comments a.feature-comments:hover,
+
+/* Comment Tagger compat */
+.comment_tagger_tag_link,
+.comment_tagger_tag_link:active,
+
+/* BP Group Sites */
+.bpgsites_group_linkages_pending_heading,
+
+/* JSTOR plugin compat */
+.commentpress_jstor .comment-title a,
+
+/* CommentPress Text Highlighter */
+.comment-backlink
+{
+	color: #761D19;
+}
+
+
+
+/* Switcher buttons */
+/*
+#switcher ul li a
+{
+	background: #EAE9DB;
+	background-color: #EAE9DB;
+}
+
+#switcher ul li a:focus,
+#switcher ul li a:hover,
+#switcher ul li a:active
+{
+	color: #fff;
+	background-color: #d6d7c6;
+}
+*/
+
+
+
+/* Sidebar Section headings */
+.comments_container > h3,
+.comments_container > h3 > span,
+.comments_container > h3 a,
+.comments_container > h3 a:active
+{
+	background-color: transparent;
+}
+
+h3.activity_heading:hover,
+.comments_container > h3:hover
+{
+	/* background-color: #afb290; */
+}
+
+
+
+/* Navigation menu items */
+/*
+#toc_sidebar .sidebar_minimiser ul li a
+{
+	background: #EAE9DB;
+	background-color: #EAE9DB;
+}
+*/
+
+#toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_ancestor > a,
+#toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_item > a,
+#toc_sidebar .sidebar_minimiser ul#nav li.active_page > a
+{
+	background-color: #fff;
+}
+
+#toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_ancestor > .post-identifier,
+#toc_sidebar .sidebar_minimiser ul#toc_list li.current_page_item > .post-identifier,
+#toc_sidebar .sidebar_minimiser ul#nav li.active_page > .post-identifier
+{
+	background-color: #fff;
+}
+
+#toc_sidebar .post-identifier,
+#toc_sidebar .sidebar_minimiser ul li a.post_activity_link
+{
+	background: transparent;
+	border-bottom: none;
+}
+
+#toc_sidebar .post-identifier
+{
+	padding-top: 8px;
+}
+
+#toc_sidebar .sidebar_minimiser ul li a.post_activity_link
+{
+	padding-top: 5px;
+	padding-bottom: 8px;
+}
+
+
+
+/* Translation tabs */
+ul#content-tabs li h2 a
+{
+	border-bottom: 1px solid #aaa;
+}
+
+ul#content-tabs li h2 a:hover
+{
+	background-color: #eee;
+}
+
+ul#content-tabs li.default-content-tab h2 a
+{
+	border: 1px solid #aaa;
+	border-bottom: none;
+}
+
+ul#content-tabs li.default-content-tab h2 a:hover
+{
+	background-color: #fff;
+}
+
+
+
+/* Content */
+.cp_feature_image .cp_featured_title .cp_featured_title_inner h2.post_title
+{
+	padding: 0;
+}
+
+
+
+/* Comments Sidebar */
+@media all and (max-width: 1400px) {
+	.comment-content
+	{
+		font-size: 90%;
+	}
+}
+
+/* Section headings */
+.comments_container > h3 a:hover,
+.comments_container > h3 a:focus
+{
+}
+
+.comments_container > h3 > span,
+.comments_container > h3 a,
+.comments_container > h3 a:active
+{
+	padding: 8px;
+}
+
+/* Comment reply cancel link */
+#cancel-comment-reply-link
+{
+	color: #000;
+}
+
+
+
+/* Activity Sidebar */
+h3.activity_heading
+{
+}
+
+h3.activity_heading,
+h3.nocomments
+{
+	padding: 8px;
+}
+
+
+
+/* WP Footnotes adds an inline colour *sigh* */
+ol.footnotes.selected_para
+{
+	color: #ca0000;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Responsive Tweaks
+--------------------------------------------------------------------------------
+*/
+
+@media all and (max-width: 650px) {
+
+	.cp_feature_image .cp_featured_title .cp_featured_title_inner h2.post_title
+	{
+		font-size: 140%;
+	}
+
+}
+
+@media all and (max-width: 450px) {
+
+	.cp_feature_image .cp_featured_title .cp_featured_title_inner h2.post_title
+	{
+		font-size: 120%;
+	}
+
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Page tweaks
+--------------------------------------------------------------------------------
+*/
+
+/* title page */
+.page-id-298 #post-298
+{
+	padding-top: 2em;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Search highlighting...
+--------------------------------------------------------------------------------
+*/
+.search_highlight
+{
+	background-color: yellow;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Force certain character combinations to stay on the same line
+--------------------------------------------------------------------------------
+*/
+span.do-not-break
+{
+	white-space: nowrap;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+"blockquote in paragraph" styles for Walden
+--> includes styles to indent entire blockquote
+--------------------------------------------------------------------------------
+*/
+span.blockquote-in-para
+{
+	font-style: normal;
+	border: none;
+}
+
+span.blockquote-in-para.bq-centered
+{
+    text-align: center;
+}
+
+span.blockquote-in-para.bq-indent-none
+{
+    padding-left: 0.5em;
+}
+
+span.blockquote-in-para.bq-indent-2em
+{
+    padding-left: 2em;
+}
+
+span.blockquote-in-para.bq-indent-3em
+{
+    padding-left: 3em;
+}
+
+span.blockquote-in-para.bq-indent-4em
+{
+    padding-left: 4em;
+}
+
+span.blockquote-in-para.bq-indent-5em
+{
+    padding-left: 5em;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+"blockquote in paragraph" line indents
+--------------------------------------------------------------------------------
+*/
+span.bq-line-indent-1em
+{
+    padding-left: 1em;
+}
+
+span.bq-line-indent-2em
+{
+    padding-left: 2em;
+}
+
+span.bq-line-indent-3em
+{
+    padding-left: 3em;
+}
+
+span.bq-line-indent-4em
+{
+    padding-left: 4em;
+}
+
+span.bq-line-indent-5em
+{
+    padding-left: 5em;
+}
+
+span.bq-line-indent-15em
+{
+    padding-left: 15em;
+}
+
+/* for dividing asterisks */
+span.bq-line-padding-5em
+{
+    padding-right: 5em;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+"table" layout in general
+--------------------------------------------------------------------------------
+*/
+span.leaders
+{
+	display: block;
+    max-width: 100%;
+    padding: 0;
+    overflow: hidden;
+    font-size: 90%;
+}
+
+span.leaders span.leaders-line
+{
+	display: block;
+	clear: both;
+	position: relative;
+}
+
+/*
+span.leaders span.leaders-line:first-child
+{
+	margin-top: 0.7em;
+}
+*/
+
+span.leaders span.leaders-line:before
+{
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content:
+		". . . . . . . . . . . . . . . . . . . . "
+		". . . . . . . . . . . . . . . . . . . . "
+		". . . . . . . . . . . . . . . . . . . . "
+		". . . . . . . . . . . . . . . . . . . . ";
+}
+
+span.leaders span.leaders-line.no-leaders:before
+{
+	color: #fff;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+"table" items
+--------------------------------------------------------------------------------
+*/
+span.leaders span.table-item,
+span.leaders span.table-item-2,
+span.leaders span.table-item-3,
+span.leaders span.table-item-4
+{
+    position: absolute;
+	display: block;
+    background: white;
+}
+
+span.leaders span.table-item
+{
+	left: 0;
+	padding-right: 0.3em;
+}
+
+span.leaders span.table-item.table-item-indented
+{
+    padding-left: 1em;
+}
+
+span.leaders span.table-item-2
+{
+	left: 50%;
+    width: 15%;
+    padding-left: 1em;
+}
+
+span.leaders span.table-item-2.dollar
+{
+    padding-left: 0.2em;
+}
+
+span.leaders span.table-item-3
+{
+	left: 65%;
+    width: 35%;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+styling internal to "table" items
+--------------------------------------------------------------------------------
+*/
+span.leaders span.outsized
+{
+	font-size: 300%;
+	float: left;
+	line-height: 0.9;
+	font-weight: 100;
+}
+
+span.leaders span.item-indented
+{
+    padding-left: 0.7em;
+}
+
+span.leaders span.table-total
+{
+	border-top: 2px solid black;
+}
+
+.selected_para span.leaders span.table-total
+{
+	border-top: 2px solid #ca0000;
+}
+
+span.leaders span.tweaked-item
+{
+	padding-left: 0.7em;
+}
+
+span.leaders span.single-digit
+{
+	padding-left: 1.5em;
+}
+
+span.leaders span.leaders-line.leaders-line-double:before
+{
+	margin-top: 0.7em;
+	margin-bottom: -0.7em;
+}
+
+span.leaders span.leaders-line-double span.table-item,
+span.leaders span.leaders-line-double span.table-item-2
+{
+	top: 0.7em;
+}
+
+span.leaders span.ditto
+{
+	display: inline-block;
+	width: 3em;
+	text-align: center;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+two column "table" layout
+--------------------------------------------------------------------------------
+*/
+
+span.leaders.two-col-leader
+{
+    margin: 0 3em;
+}
+
+span.leaders.two-col-leader span.table-item-2
+{
+	left: 80%;
+    width: 20%;
+}
+
+
+
+/* specific tweaks for second beanfield table */
+span.leaders.beanfield-2
+{
+    margin: 0;
+}
+
+span.leaders.beanfield-2 span.table-item-2.dollar
+{
+	padding-left: 0.6em;
+}
+
+span.leaders.beanfield-2 span.table-item.table-item-indented
+{
+	padding-left: 4em;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+four column "table" layout
+--------------------------------------------------------------------------------
+*/
+
+span.leaders.four-col-leader
+{
+}
+
+span.leaders.four-col-leader span.table-item-2
+{
+	left: 30%;
+    width: 15%;
+    padding-left: 0.7em;
+}
+
+span.leaders.four-col-leader span.table-item-2.dollar
+{
+    padding-left: 0.2em;
+}
+
+span.leaders.four-col-leader span.table-item-3
+{
+	left: 45%;
+    width: 55%;
+}
+
+span.leaders.four-col-leader span.table-item-4
+{
+	left: 90%;
+}
+
+span.leaders.four-col-leader span.table-item-4 span.table-item-4-inner
+{
+	z-index: 100;
+	position: absolute;
+	height: 1em;
+	width: 10em;
+	display: block;
+	top: 7em;
+	right: -7em;
+	line-height: 1.2;
+	-webkit-transform: rotate(90deg);  /* Chrome, Safari 3.1+ */
+	-moz-transform: rotate(90deg);  /* Firefox 3.5-15 */
+	-ms-transform: rotate(90deg);  /* IE 9 */
+	-o-transform: rotate(90deg);  /* Opera 10.50-12.00 */
+	transform: rotate(90deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); /* Older IE */
+}
+
+span.leaders.four-col-leader span.table-item-4 span.stretched
+{
+	display: block;
+	font-size: 160%;
+	z-index: 100;
+	position: absolute;
+	top: 3em;
+	right: -0.1em;
+    -webkit-transform: scale(1,9); /* Safari and Chrome */
+    -moz-transform: scale(1,9); /* Firefox */
+    -ms-transform: scale(1,9); /* IE 9 */
+    -o-transform: scale(1,9); /* Opera */
+    transform: scale(1,9); /* W3C */
+}
+
+span.leaders span.table-item-4 span.item-indented
+{
+	padding-left: 3.5em;
+}
+
+
+
+/* first beanfield table tweak */
+span.leaders.beanfield-1 span.table-item-2
+{
+	left: 65%;
+    width: 15%;
+}
+
+span.leaders.beanfield-1 span.table-item-3
+{
+	left: 80%;
+    width: 20%;
+}
+
+span.leaders.beanfield-1 span.table-item.table-item-indented
+{
+	padding-left: 4em;
+}
+
+span.leaders.beanfield-1 span.table-item-2.dollar
+{
+	padding-left: 1em;
+}
+
+span.leaders.beanfield-1 span.table-item-2.dollar.table-total
+{
+	padding-left: 0.7em;
+}
+
+
+
+/* Testing CSS3 Stuff */
+
+.vertical-text {
+  -webkit-transform: rotate(90deg);  /* Chrome, Safari 3.1+ */
+     -moz-transform: rotate(90deg);  /* Firefox 3.5-15 */
+      -ms-transform: rotate(90deg);  /* IE 9 */
+       -o-transform: rotate(90deg);  /* Opera 10.50-12.00 */
+          transform: rotate(90deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+			 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); /* Older IE */
+}
+
+/*
+.datebox span:nth-child(3) {
+	right: -16px;
+	bottom: 24px;
+	writing-mode: lr-tb;
+}
+*/
