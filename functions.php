@@ -871,8 +871,8 @@ if ( ! function_exists( 'commentpress_thoreau_get_liked_comments_meta' ) ) :
 		$comment_likes_text = sprintf(
 			/* translators: The placeholder is the number of comment likes. */
 			_n(
-				'<span class="cp_comment_likes">%d</span> comment', // Singular.
-				'<span class="cp_comment_likes">%d</span> comments', // Plural.
+				'<span class="cp_comment_likes">%d</span> like', // Singular.
+				'<span class="cp_comment_likes">%d</span> likes', // Plural.
 				$comment->likes, // Number.
 				'commentpress-thoreau' // Domain.
 			),
