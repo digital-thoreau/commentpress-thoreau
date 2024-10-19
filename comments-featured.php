@@ -8,8 +8,12 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-// Get page content --> I prefer to do this before the page is sent
-// to the browser: the markup is generated before anything is displayed.
+/*
+ * Get page content.
+ *
+ * I prefer to do this before the page is sent to the browser: the markup is
+ * generated before anything is displayed.
+ */
 $_page_content = commentpress_thoreau_get_featured_comments_page_content();
 
 get_header();
@@ -24,7 +28,7 @@ get_header();
 				<div class="post">
 
 					<div id="comments_in_page_wrapper">
-						<?php echo $_page_content; ?>
+						<?php echo $_page_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 					</div>
 
 				</div><!-- /post -->

@@ -20,7 +20,9 @@ if ( ! empty( $core ) ) {
 	// Get Special Pages.
 	$special_pages = $core->db->setting_get( 'cp_special_pages' );
 	if ( is_array( $special_pages ) && ! empty( $special_pages ) ) {
-		$_special_pages = $special_pages;
+		foreach ( $special_pages as $special_page ) {
+			$_special_pages[] = (int) $special_page;
+		}
 	}
 
 }
@@ -37,6 +39,7 @@ get_header();
 
 			<div id="content" class="clearfix">
 
+				<?php // phpcs:ignore WordPress.Security.NonceVerification.Recommended ?>
 				<?php if ( isset( $_GET['s'] ) && ! empty( $_GET['s'] ) && have_posts() ) : ?>
 
 					<div class="post">
@@ -47,7 +50,7 @@ get_header();
 
 							<?php the_post(); ?>
 
-							<?php if ( ! in_array( get_the_ID(), $_special_pages ) ) : ?>
+							<?php if ( ! in_array( (int) get_the_ID(), $_special_pages, true ) ) : ?>
 
 								<div class="search_result">
 

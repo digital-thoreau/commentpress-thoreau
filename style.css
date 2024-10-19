@@ -1,12 +1,16 @@
-/*
-Theme Name: CommentPress Thoreau
-Theme URI: https://github.com/digital-thoreau/commentpress-thoreau
-Description: A child of the CommentPress Flat Theme for Digital Thoreau.
-Tags: commentpress, buddypress, groupblog, sticky-post, threaded-comments, paragraph-comments
-Version: 1.0.2
-Template: commentpress-flat
-Author: Christian Wach
-Author URI: https://www.haystack.co.uk
-*/
+/**
+ * Theme Name:  CommentPress Thoreau
+ * Description: A child of the CommentPress Flat Theme for <em>Digital Thoreau</em>.
+ * Tags:        commentpress, buddypress, groupblog, paragraph-comments
+ * Theme URI:   https://github.com/digital-thoreau/commentpress-thoreau
+ * Version:     1.0.2
+ * Author:      Christian Wach
+ * Author URI:  https://www.haystack.co.uk
+ * Template:    commentpress-flat
+ * Text Domain: commentpress-thoreau
+ * Domain Path: /languages
+ *
+ * @package CommentPress_Thoreau
+ */
 
-/* deliberately empty: see 'functions.php' for how styles and scripts are enqueued */
+/* Deliberately empty: see 'functions.php' for how styles and scripts are enqueued. */

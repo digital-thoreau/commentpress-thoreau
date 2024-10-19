@@ -12,8 +12,7 @@ defined( 'ABSPATH' ) || exit;
 $core = commentpress_core();
 
 ?>
-<!-- toc_sidebar.php (CommentPress Thoreau theme) -->
-
+<!-- themes/commentpress-thoreau/assets/templates/toc_sidebar.php -->
 <div id="navigation">
 	<div id="toc_sidebar" class="sidebar_container">
 
@@ -53,8 +52,12 @@ $core = commentpress_core();
 					 * Filters the Search accordion title.
 					 *
 					 * @since 3.4
+					 *
+					 * @param string
 					 */
-					echo apply_filters( 'cp_content_tab_search_title', __( 'Search', 'commentpress-thoreau' ) );
+					$search_title = apply_filters( 'cp_content_tab_search_title', __( 'Search', 'commentpress-thoreau' ) );
+
+					echo esc_html( $search_title );
 
 					?>
 				</h3>
@@ -73,8 +76,12 @@ $core = commentpress_core();
 						 * Filters the Special Pages accordion title.
 						 *
 						 * @since 3.4
+						 *
+						 * @param string
 						 */
-						echo apply_filters( 'cp_content_tab_special_pages_title', __( 'Special Pages', 'commentpress-thoreau' ) );
+						$pages_title = apply_filters( 'cp_content_tab_special_pages_title', __( 'Special Pages', 'commentpress-thoreau' ) );
+
+						echo esc_html( $pages_title );
 
 						?>
 					</h3>
@@ -88,12 +95,11 @@ $core = commentpress_core();
 						 * @since 3.4
 						 *
 						 * @param str The existing path returned by WordPress.
-						 * @return str The modified path.
 						 */
 						$cp_navigation = apply_filters( 'cp_template_navigation', locate_template( 'assets/templates/navigation.php' ) );
 
 						// Load it if we find it.
-						if ( $cp_navigation != '' ) {
+						if ( ! empty( $cp_navigation ) ) {
 							load_template( $cp_navigation );
 						}
 
@@ -108,8 +114,12 @@ $core = commentpress_core();
 					 * Filters the Table of Contents accordion title.
 					 *
 					 * @since 3.4
+					 *
+					 * @param string
 					 */
-					echo apply_filters( 'cp_content_tab_toc_title', __( 'Table of Contents', 'commentpress-thoreau' ) );
+					$toc_title = apply_filters( 'cp_content_tab_toc_title', __( 'Table of Contents', 'commentpress-thoreau' ) );
+
+					echo esc_html( $toc_title );
 
 					?>
 				</h3>
@@ -120,12 +130,15 @@ $core = commentpress_core();
 							<?php
 
 							// Exclude Featured Comments & Liked Comments pages.
-							$excluded = array_unique( array_merge(
-								commentpress_thoreau_get_featured_comments_pages(),
-								commentpress_thoreau_get_liked_comments_pages()
-							));
+							$excluded = array_unique(
+								array_merge(
+									commentpress_thoreau_get_featured_comments_pages(),
+									commentpress_thoreau_get_liked_comments_pages()
+								)
+							);
 
 							// Show the TOC.
+							// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							echo $core->display->get_toc_list( $excluded );
 
 							?>
