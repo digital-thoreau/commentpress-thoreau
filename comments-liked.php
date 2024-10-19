@@ -2,6 +2,8 @@
 /**
  * Template Name: Liked Comments
  *
+ * @since 1.0
+ *
  * @package CommentPress_Thoreau
  */
 
@@ -19,7 +21,7 @@ $_page_content = commentpress_thoreau_get_liked_comments_page_content();
 get_header();
 
 ?>
-<!-- comments-featured.php -->
+<!-- comments-liked.php -->
 <div id="wrapper">
 	<div id="main_wrapper" class="clearfix">
 		<div id="page_wrapper">

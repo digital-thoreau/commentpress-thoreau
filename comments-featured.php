@@ -2,6 +2,8 @@
 /**
  * Template Name: Featured Comments
  *
+ * @since 1.0
+ *
  * @package CommentPress_Thoreau
  */
 

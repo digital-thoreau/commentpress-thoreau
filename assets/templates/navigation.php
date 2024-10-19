@@ -4,6 +4,8 @@
  *
  * TODO: We need to account for situations where no CommentPress Core Special Pages exist.
  *
+ * @since 1.0
+ *
  * @package CommentPress_Thoreau
  */
 

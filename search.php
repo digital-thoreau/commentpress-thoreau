@@ -2,6 +2,8 @@
 /**
  * Search Template.
  *
+ * @since 1.0
+ *
  * @package CommentPress_Thoreau
  */
 
