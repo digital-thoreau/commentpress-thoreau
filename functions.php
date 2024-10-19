@@ -16,7 +16,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Set our version here.
-define( 'COMMENTPRESS_THOREAU_VERSION', '1.0.3a' );
+define( 'COMMENTPRESS_THOREAU_VERSION', '1.0.3' );
 
 /**
  * Instantiate search modifier object.
