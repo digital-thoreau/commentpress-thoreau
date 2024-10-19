@@ -140,7 +140,7 @@ function commentpress_thoreau_enqueue_styles() {
 		global $post;
 
 		// Bail if there's no post object.
-		if ( ! is_object( $post ) ) {
+		if ( ! ( $post instanceof WP_Post ) ) {
 			return;
 		}
 
@@ -199,7 +199,7 @@ function commentpress_thoreau_check_commentable( $is_commentable ) {
 		global $post;
 
 		// Override if it's our Featured Comments or Liked Comments page.
-		if ( ( $post instanceof WP_Post ) && in_array( $post->ID, $pages, true ) ) {
+		if ( ( $post instanceof WP_Post ) && in_array( (int) $post->ID, $pages, true ) ) {
 			return false;
 		}
 
@@ -281,11 +281,14 @@ if ( ! function_exists( 'commentpress_thoreau_get_featured_comments_page_content
 			remove_action( 'commentpress_before_scrollable_comments', [ $bp_groupsites->activity, 'get_group_comments_filter' ] );
 		}
 
-		// Set page title.
-		$pagetitle = apply_filters(
-			'cp_page_featured_comments_title',
-			__( 'Featured Comments', 'commentpress-thoreau' )
-		);
+		/**
+		 * Filters the page title.
+		 *
+		 * @since 1.0
+		 *
+		 * @param string
+		 */
+		$pagetitle = apply_filters( 'cp_page_featured_comments_title', __( 'Featured Comments', 'commentpress-thoreau' ) );
 
 		// Construct title.
 		$_page_content = '<h2 class="post_title">' . $pagetitle . '</h2>' . "\n\n";
@@ -293,17 +296,23 @@ if ( ! function_exists( 'commentpress_thoreau_get_featured_comments_page_content
 		// Get page or post.
 		$page_or_post = $core->nav->setting_post_type_get();
 
-		// Set default.
-		$blogtitle = apply_filters(
-			'cp_page_featured_comments_blog_title',
-			__( 'Comments on the Blog', 'commentpress-thoreau' )
-		);
+		/**
+		 * Filters the blog title.
+		 *
+		 * @since 1.0
+		 *
+		 * @param string
+		 */
+		$blogtitle = apply_filters( 'cp_page_featured_comments_blog_title', __( 'Comments on the Blog', 'commentpress-thoreau' ) );
 
-		// Set default.
-		$booktitle = apply_filters(
-			'cp_page_featured_comments_book_title',
-			__( 'Comments on the Pages', 'commentpress-thoreau' )
-		);
+		/**
+		 * Filters the "Comments on the Pages" title.
+		 *
+		 * @since 1.0
+		 *
+		 * @param string
+		 */
+		$booktitle = apply_filters( 'cp_page_featured_comments_book_title', __( 'Comments on the Pages', 'commentpress-thoreau' ) );
 
 		// Get title.
 		$title = ( 'page' === $page_or_post ) ? $booktitle : $blogtitle;

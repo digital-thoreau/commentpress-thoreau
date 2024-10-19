@@ -21,7 +21,7 @@ $core = commentpress_core();
 		/**
 		 * Fires before the Contents Tab.
 		 *
-		 * @since 3.4
+		 * @since CommentPress 3.4
 		 */
 		do_action( 'cp_content_tab_before' );
 
@@ -39,7 +39,7 @@ $core = commentpress_core();
 				/**
 				 * Fires before the Search accordion.
 				 *
-				 * @since 3.4
+				 * @since CommentPress 3.4
 				 */
 				do_action( 'cp_content_tab_before_search' );
 
@@ -51,7 +51,7 @@ $core = commentpress_core();
 					/**
 					 * Filters the Search accordion title.
 					 *
-					 * @since 3.4
+					 * @since CommentPress 3.4
 					 *
 					 * @param string
 					 */
@@ -75,7 +75,7 @@ $core = commentpress_core();
 						/**
 						 * Filters the Special Pages accordion title.
 						 *
-						 * @since 3.4
+						 * @since CommentPress 3.4
 						 *
 						 * @param string
 						 */
@@ -92,7 +92,7 @@ $core = commentpress_core();
 						/**
 						 * Try to locate template using WordPress method.
 						 *
-						 * @since 3.4
+						 * @since CommentPress 3.4
 						 *
 						 * @param str The existing path returned by WordPress.
 						 */
@@ -113,7 +113,7 @@ $core = commentpress_core();
 					/**
 					 * Filters the Table of Contents accordion title.
 					 *
-					 * @since 3.4
+					 * @since CommentPress 3.4
 					 *
 					 * @param string
 					 */
@@ -151,7 +151,7 @@ $core = commentpress_core();
 				/**
 				 * Fires after the Contents Tab.
 				 *
-				 * @since 3.4
+				 * @since CommentPress 3.4
 				 */
 				do_action( 'cp_content_tab_after' );
 

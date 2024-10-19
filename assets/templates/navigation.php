@@ -35,7 +35,7 @@ if ( ! empty( $core ) ) {
 					/**
 					 * Filters the Site title.
 					 *
-					 * @since 3.4
+					 * @since CommentPress 3.4
 					 *
 					 * @param string
 					 */
@@ -53,7 +53,7 @@ if ( ! empty( $core ) ) {
 					/**
 					 * Fires after the Network Home title.
 					 *
-					 * @since 3.4
+					 * @since CommentPress 3.4
 					 */
 					do_action( 'cp_nav_after_network_home_title' );
 
@@ -118,7 +118,7 @@ if ( ! empty( $core ) ) {
 				/**
 				 * Fires before Special Page links are rendered.
 				 *
-				 * @since 3.9
+				 * @since CommentPress 3.9
 				 */
 				do_action( 'cp_nav_before_special_pages' );
 
@@ -166,7 +166,7 @@ if ( ! empty( $core ) ) {
 				/**
 				 * Fires before Blog Page links are rendered.
 				 *
-				 * @since 3.9
+				 * @since CommentPress 3.9
 				 */
 				do_action( 'cp_before_blog_page' );
 
