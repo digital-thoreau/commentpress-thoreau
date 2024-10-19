@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the CommentPress Thoreau theme.
 msgid ""
 msgstr ""
-"Project-Id-Version: CommentPress Thoreau 1.0.3a\n"
+"Project-Id-Version: CommentPress Thoreau 1.0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/commentpress-thoreau\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-19T14:25:37+00:00\n"
+"POT-Creation-Date: 2024-10-19T14:32:19+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: commentpress-thoreau\n"
@@ -89,8 +89,8 @@ msgstr[1] ""
 
 #. translators: The placeholder is the number of comment likes.
 #: functions.php:873
-msgid "<span class=\"cp_comment_likes\">%d</span> comment"
-msgid_plural "<span class=\"cp_comment_likes\">%d</span> comments"
+msgid "<span class=\"cp_comment_likes\">%d</span> like"
+msgid_plural "<span class=\"cp_comment_likes\">%d</span> likes"
 msgstr[0] ""
 msgstr[1] ""
 
